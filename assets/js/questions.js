@@ -1,3 +1,5 @@
+//This js stores the questions and question logic (?)
+
 let quizQuestions = [
     {
       question: "Which built-in method calls a function for each element in the array?",
@@ -43,3 +45,7 @@ let quizQuestions = [
       correctChoice: "4"
     },
   ];
+
+//function questions-logic
+//dynamically create question in "question-title"
+//dynamically create choices in "choices" (ol,li id 1,li id 2,li id 3,li id 4,ol)

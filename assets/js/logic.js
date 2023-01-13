@@ -1,45 +1,18 @@
-let quizQuestions = [
-    {
-      question: "Which built-in method calls a function for each element in the array?",
-      choices: {
-        1: "while()",
-        2: "loop()",
-        3: "forEach()",
-        4: "None of the above",
-      },
-      correctChoice: "3"
-    },
-  
-    {
-      question: "Which of the following function of Array object returns a new array comprised of this array joined with other array(s) and/or value(s)?",
-      choices: {
-        1: "concat()",
-        2: "pop()",
-        3: "push()",
-        4: "match()",
-      },
-      correctChoice: "1"
-    },
-  
-    {
-      question: "JavaScript file has an extension of:",
-      choices: {
-        1: ".xml",
-        2: ".js",
-        3: ".react",
-        4: ".sc",
-      },
-      correctChoice: "2"
-    },
-  
-    {
-      question: "Which of the dialog box display a message and a data entry field?",
-      choices: {
-        1: "alert()",
-        2: "msg()",
-        3: "confirm()",
-        4: "prompt()",
-      },
-      correctChoice: "4"
-    },
-  ];
+//This js is responsible for how the entire website behaves
+
+//function viewhighscores -> redirect to highestscore
+
+//function startQuiz () on clicking Start:
+// local Storage on timer and score and initials
+// timer=40000
+
+// function questions ()
+//eventlistener on clicking choices, read li id
+//if correct (li id matched answer)
+//score++, display "Correct", beep, next question (array index)
+//else, time-=5000 (5sec), display "Wrong", beep, next question (array index) 
+
+// function finish (event)
+// listen for initials
+// add to local storage
+// listen to submit button 
