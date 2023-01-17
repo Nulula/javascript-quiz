@@ -1,10 +1,11 @@
-//this js stores scores and initials and clears local storage
+//it will be a similar function to build a list of highest scores and initials
 
-// function display scores and initials
+let scoreStr = JSON.parse(localStorage.getItem("score"));
+let initialsStr = JSON.parse(localStorage.getItem("initials"));
 
-// function clear local Storage
-// listen to clear button 
-// clear the local Storage
+var scoreCount = [];
+scoreCount.push(scoreStr,initialsStr);
 
-//function goback
-// listen to go back button - if true, back to index.html
+
+
+
