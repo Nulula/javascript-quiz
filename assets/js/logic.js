@@ -71,10 +71,12 @@ function buildHTML() {
         buttEl.setAttribute("id","answer");
 
     }
-    var choices = document.getElementById("questions");
+    var choices = document.getElementsByTagName("button");
+    console.log(choices);
 
         buildQuestion(currentQuestion);
-        choices.addEventListener("click", function(event) {
+        for (let i=0;i<choices.length;i++) {
+        choices[i].addEventListener("click", function(event) {
             checkAnswer(event,currentQuestion);
             setTimeout(function() {
                 currentQuestion++;
@@ -83,8 +85,9 @@ function buildHTML() {
                   return;
                 }
                 buildQuestion(currentQuestion);
-            }, 1000);
+            }, 700);
             });
+          };
 
 }
 
@@ -120,19 +123,16 @@ function finishQuiz() {
 
     var scoreEl = document.querySelector("#final-score");
     scoreEl.textContent = score;
-
+    currentQuestion = 0;
     document.querySelector("#submit").addEventListener("click", function(event) {
         event.preventDefault();
         var initials = document.querySelector("#initials").value;
         localStorage.setItem("initials", JSON.stringify(initials));
-
+        localStorage.setItem("score", JSON.stringify(score));
         feedback.setAttribute("class","feedback hide");
         startScreen.setAttribute("class","start");
         endScreen.setAttribute("class","hide"); 
     });
-
-    localStorage.setItem("score", JSON.stringify(score));
-    console.log(score);
 
 }
 
